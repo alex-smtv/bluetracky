@@ -71,10 +71,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Input</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>🔨</source>
         <translation type="unfinished"></translation>
     </message>
@@ -123,11 +119,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show the Octopus</source>
+        <source>Show the Head</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hide the Octopus</source>
+        <source>Hide the Head</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -151,7 +147,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The Octopus is sad</source>
+        <source>Bluetrack is sad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -172,6 +168,14 @@ Exiting now.</source>
     </message>
     <message>
         <source>Don&apos;t run as root to remove these annoying messages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Activate Dark Theme</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

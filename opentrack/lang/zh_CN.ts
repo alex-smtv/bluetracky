@@ -71,10 +71,6 @@
         <translation>停止</translation>
     </message>
     <message>
-        <source>Input</source>
-        <translation>输入</translation>
-    </message>
-    <message>
         <source>🔨</source>
         <translation></translation>
     </message>
@@ -131,11 +127,11 @@
         <translation> （调试）</translation>
     </message>
     <message>
-        <source>Show the Octopus</source>
+        <source>Show the Head</source>
         <translation>显示八爪鱼</translation>
     </message>
     <message>
-        <source>Hide the Octopus</source>
+        <source>Hide the Head</source>
         <translation>隐藏八爪鱼</translation>
     </message>
     <message>
@@ -159,7 +155,7 @@
         <translation>退出</translation>
     </message>
     <message>
-        <source>The Octopus is sad</source>
+        <source>Bluetrack is sad</source>
         <translation>八爪鱼不开心了</translation>
     </message>
     <message>
@@ -177,6 +173,14 @@ Exiting now.</source>
     <message>
         <source> :: </source>
         <translation></translation>
+    </message>
+    <message>
+        <source>Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Activate Dark Theme</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

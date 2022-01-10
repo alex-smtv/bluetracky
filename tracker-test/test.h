@@ -38,6 +38,6 @@ class test_metadata : public Metadata
     Q_OBJECT
 
     QString name() override { return tr("Test tracker"); }
-    QIcon icon() override { return QIcon(":/images/opentrack.png"); }
+    QIcon icon() override { return QIcon(":/images/bluetrack.png"); }
 };
 

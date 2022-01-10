@@ -4,7 +4,7 @@
 <context>
     <name>main_window</name>
     <message>
-        <source>The Octopus is sad</source>
+        <source>Bluetrack is sad</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

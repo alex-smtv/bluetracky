@@ -11,16 +11,24 @@
 #endif
 
 #include <pxcsensemanager.h>
-#include <RealSense/Face/FaceModule.h>
-#include <RealSense/Face/FaceConfiguration.h>
+
+/*
+* These lines were altered (see below):
+* #include <RealSense/Face/FaceConfiguration.h>
+* #include <RealSense/Face/FaceModule.h>
+*/
+
+#include <pxcfaceconfiguration.h>
+#include <pxcfacemodule.h>
 
 #include <cstdlib>
 
 const size_t kPreviewStreamWidth = 640;
 const size_t kPreviewStreamHeight = 480;
 
-using PXCFaceData = Intel::RealSense::Face::FaceData;
-using PXCFaceConfiguration = Intel::RealSense::Face::FaceConfiguration;
+// Not necessary anymore
+//using PXCFaceData = Intel::RealSense::Face::FaceData;
+//using PXCFaceConfiguration = Intel::RealSense::Face::FaceConfiguration;
 
 PXCSenseManager* g_senseManager = NULL;
 PXCFaceData* g_faceData = NULL;
