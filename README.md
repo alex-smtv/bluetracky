@@ -1,18 +1,18 @@
-# Bluetrack
+# Bluetracky
 
 ![Intro](./_res/intro.png)
 
-`Bluetrack` is a custom edited build of `opentrack version 2.3.12` with a focus on the `Point Tracker` module. It takes opentrack 2.3.12 and adds selected quality of life modification seen on later builds. It doesn't change tracking behaviors of the Point Tracker found on opentrack 2.3.12. Additionally it also contains custom addition not found in the original software.
+`Bluetracky` is a custom edited build of `opentrack version 2.3.12` with a focus on the `Point Tracker` module. It takes opentrack 2.3.12 and adds selected quality of life modification seen on later builds. It doesn't change tracking behaviors of the Point Tracker found on opentrack 2.3.12. Additionally it also contains custom addition not found in the original software.
 
 This is mostly a personal build tailored to my needs which I make available for anyone interested in it. It is not meant to replace the original software development.
 
 ## Settings location
-In order to not mix-match with the original opentrack, bluetrack stores its settings in a different location in the registry and in the disk.
+In order to not mix-match with the original opentrack, bluetracky stores its settings in a different location in the registry and in the disk.
 
-Profiles are stored in your `Documents/bluetrack`.
+Profiles are stored in your `Documents/bluetracky`.
 
 ## Note on the software name
-I decided to give this custom build the name bluetrack instead of opentrack in the hope to not confuse people while using the software. It will be clear whether they're using an official opentrack software or not. Remember, this a custom build.
+I decided to give this custom build the name bluetracky instead of opentrack in the hope to not confuse people while using the software. It will be clear whether they're using an official opentrack software or not. Remember, this a custom build.
 
 Additionally I changed the logo to my liking and which fits the new name.
 

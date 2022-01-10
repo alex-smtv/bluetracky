@@ -72,5 +72,5 @@ class udp_sender_dll : public Metadata
     Q_OBJECT
 
     QString name() override { return tr("UDP over network"); }
-    QIcon icon() override { return QIcon(":/images/bluetrack.png"); }
+    QIcon icon() override { return QIcon(":/images/bluetracky.png"); }
 };

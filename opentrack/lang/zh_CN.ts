@@ -155,7 +155,7 @@
         <translation>退出</translation>
     </message>
     <message>
-        <source>Bluetrack is sad</source>
+        <source>Bluetracky is sad</source>
         <translation>八爪鱼不开心了</translation>
     </message>
     <message>

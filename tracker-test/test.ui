@@ -18,7 +18,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../gui/images/bluetrack.png</normaloff>../gui/images/bluetrack.png</iconset>
+    <normaloff>../gui/images/bluetracky.png</normaloff>../gui/images/bluetracky.png</iconset>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>

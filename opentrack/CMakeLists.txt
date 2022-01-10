@@ -2,7 +2,7 @@ otr_module(executable EXECUTABLE BIN)
 
 set_target_properties(opentrack-executable PROPERTIES
     SUFFIX "${opentrack-binary-suffix}"
-    OUTPUT_NAME "bluetrack"
+    OUTPUT_NAME "bluetracky"
     PREFIX ""
 )
 

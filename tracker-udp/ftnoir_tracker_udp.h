@@ -56,6 +56,6 @@ class udp_receiver_dll : public Metadata
     Q_OBJECT
 
     QString name() { return tr("UDP over network"); }
-    QIcon icon() { return QIcon(":/images/bluetrack.png"); }
+    QIcon icon() { return QIcon(":/images/bluetracky.png"); }
 };
 

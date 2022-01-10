@@ -6,9 +6,9 @@ if(GIT_FOUND)
     git_describe(OPENTRACK_COMMIT --tags --always)
 endif()
 
-set(BLUETRACK_VERSION "bluetrack-2.3.12-B1.0.0")
+set(BLUETRACKY_VERSION "bluetracky-2.3.12-B1.0.0")
 
-file(WRITE ${CMAKE_BINARY_DIR}/opentrack-version.hxx "#define OPENTRACK_VERSION \"${BLUETRACK_VERSION}\"")
+file(WRITE ${CMAKE_BINARY_DIR}/opentrack-version.hxx "#define OPENTRACK_VERSION \"${BLUETRACKY_VERSION}\"")
 
 set(version-string "\
 #ifdef __cplusplus
@@ -18,7 +18,7 @@ extern
 #endif
 
 const char* const opentrack_version;
-const char* const opentrack_version = \"${BLUETRACK_VERSION}\";
+const char* const opentrack_version = \"${BLUETRACKY_VERSION}\";
 ")
 
 set(file "${CMAKE_CURRENT_BINARY_DIR}/version.cpp")

@@ -36,8 +36,8 @@ private:
     void paintEvent(QPaintEvent*) override;
 
     Pose_ R, T;
-    QImage front{ QImage{ ":/images/bluetrack-face.png" }.convertToFormat(QImage::Format_ARGB32) };
-    QImage back{ QImage{ ":/images/bluetrack-back.png" }.convertToFormat(QImage::Format_ARGB32).mirrored(true, false) };
+    QImage front{ QImage{ ":/images/bluetracky-face.png" }.convertToFormat(QImage::Format_ARGB32) };
+    QImage back{ QImage{ ":/images/bluetracky-back.png" }.convertToFormat(QImage::Format_ARGB32).mirrored(true, false) };
     QImage shine_front{ QImage{ front.width(), front.height(), QImage::Format_ARGB32 } };
     QImage shadow_front{ QImage{ front.width(), front.height(), QImage::Format_ARGB32 } };
     QImage shine_back{ QImage{ back.width(), back.height(), QImage::Format_ARGB32 } };

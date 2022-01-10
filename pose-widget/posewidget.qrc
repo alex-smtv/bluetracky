@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>images/bluetrack-face.png</file>
-        <file>images/bluetrack-back.png</file>
+        <file>images/bluetracky-face.png</file>
+        <file>images/bluetracky-back.png</file>
     </qresource>
 </RCC>
