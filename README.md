@@ -43,13 +43,11 @@ Currently Windows is the targeted platform for release builds. You'll need to bu
 ## Logo credit
 The logo is a custom construction and editing based on free resources found as following:
 
-Head / Hairs
+- Head / Hairs
 [Designed by pikisuperstar / Freepik](https://www.freepik.com/free-vector/cartoon-man-character-template_4175440.htm)
-
-Eyes / Nose
+- Eyes / Nose
 [Designed by brgfx / Freepik](https://www.freepik.com/free-vector/faceless-man-different-faces-with-emotions_1250774.htm)
-
-Beard
+- Beard
 [Designed by macrovector / Freepik](https://www.freepik.com/free-vector/beard-hairstyles-face-set_3799705.htm)
 
 ## Full Credits
