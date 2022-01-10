@@ -1,4 +1,7 @@
 add_compile_definitions(PS3EYE_DEBUG)
+# https://stackoverflow.com/questions/14172856/compile-with-mt-instead-of-md-using-cmake
+# Override to specify MT instead of MD which gives us problems
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ps3eye-driver/CMakeLists.txt")
     add_subdirectory("ps3eye-driver")
