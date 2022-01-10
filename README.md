@@ -1,3 +1,66 @@
+# Bluetrack
+
+![Intro](./_res/intro.png)
+
+`Bluetrack` is a custom edited build of `opentrack version 2.3.12` with a focus on the `Point Tracker` module. It takes opentrack 2.3.12 and adds selected quality of life modification seen on later builds. It doesn't change tracking behaviors of the Point Tracker found on opentrack 2.3.12. Additionally it also contains custom addition not found in the original software.
+
+This is mostly a personal build tailored to my needs which I make available for anyone interested in it. It is not meant to replace the original software development.
+
+## Settings location
+In order to not mix-match with the original opentrack, bluetrack stores its settings in a different location in the registry and in the disk.
+
+Profiles are stored in your `Documents/bluetrack`.
+
+## Note on the software name
+I decided to give this custom build the name bluetrack instead of opentrack in the hope to not confuse people while using the software. It will be clear whether they're using an official opentrack software or not. Remember, this a custom build.
+
+Additionally I changed the logo to my liking and which fits the new name.
+
+Side note: the name is mostly changed for the end user (interface, executable). For devs the name is kept as opentrack for references (for instance variable names).
+
+## Motivation
+
+This endeavor to create a custom build is a result of tackling problems faced with the original software. The software was working very well with my personnal profile I spent countless hours tweaking. Then a few version later of the software with new features and my profile wasn't working as well as it was in the past: I lost significant stabilities with the head tracking.
+
+I spent another countless hours/days trying different builds to resolve the problem by recreating profiles from scratch and exploiting new features. To keep it short I got some positive result, but it never matched my previous experience and the new features introduced in the newer builds were breaking someting.
+
+I knew for a fact that the 2.3.12 build was the last build I knew to be working exactly as I expected to. However this build is lacking some features I'd like to have. The most predominant ones are the dark theme and the fix to the ps3 red light not shutting down with the ps3 open driver.
+
+Following the mantra of `if it ain't broke, don't fix it`, I decided to take the 2.3.12 build and polish the outside as I would like it to look like. This means this build is not altering tracking behaviors found in 2.3.12.
+
+## Notable modification
+As a reminder, some of these modification come from later build of opentrack and others are custom additions:
+- Dark theme available and selectable (instead of being locked to system configuration).
+- Fix the PS3 red light not shutting down when the software is stopped.
+- Octopus head became a human head.
+- Enhanced human head position and lighting.
+- Add a mirror option for the human head position to mimic result as seen in-game. Made this option selected by default.
+- Default folder used for saving profiles changed in order to not conflict with the original opentrack software.
+
+## Release platform
+Currently Windows is the targeted platform for release builds. You'll need to build it yourself for other platforms with no guarantee as I've presently not tested its effectiveness.
+
+## Logo credit
+The logo is a custom construction and editing based on free resources found as following:
+
+Head / Hairs
+[Designed by pikisuperstar / Freepik](https://www.freepik.com/free-vector/cartoon-man-character-template_4175440.htm)
+
+Eyes / Nose
+[Designed by brgfx / Freepik](https://www.freepik.com/free-vector/faceless-man-different-faces-with-emotions_1250774.htm)
+
+Beard
+[Designed by macrovector / Freepik](https://www.freepik.com/free-vector/beard-hairstyles-face-set_3799705.htm)
+
+## Full Credits
+I would like to personally thank the creator of opentrack and its contributors for making opentrack a great open source tool.
+
+You'll find the full original credits in the original [README below](#credits-in-chronological-order).
+
+***
+
+# Original README below! (opentrack readme)
+
 ## Intro
 
 [<img src="https://ci.appveyor.com/api/projects/status/n0j9h38jnif5qbe9/branch/unstable?svg=true"/>](https://ci.appveyor.com/project/sthalik/opentrack/branch/unstable)
