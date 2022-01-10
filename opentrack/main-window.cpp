@@ -170,12 +170,12 @@ void main_window::init_tray_menu()
 
     menu_action_header.setEnabled(false);
     menu_action_header.setText(display_name);
-    menu_action_header.setIcon(QIcon(":/images/opentrack.png"));
+    menu_action_header.setIcon(QIcon(":/images/bluetrack.png"));
     tray_menu.addAction(&menu_action_header);
 
     menu_action_show.setIconVisibleInMenu(true);
-    menu_action_show.setText(isHidden() ? tr("Show the Octopus") : tr("Hide the Octopus"));
-    menu_action_show.setIcon(QIcon(":/images/opentrack.png"));
+    menu_action_show.setText(isHidden() ? tr("Show the Head") : tr("Hide the Head"));
+    menu_action_show.setIcon(QIcon(":/images/bluetrack.png"));
     QObject::connect(&menu_action_show, &QAction::triggered, this, [&] { toggle_restore_from_tray(QSystemTrayIcon::Trigger); });
     tray_menu.addAction(&menu_action_show);
 
@@ -257,7 +257,7 @@ void main_window::die_on_profile_not_writable()
     static const QString pad(16, QChar(' '));
 
     QMessageBox::critical(this,
-                          tr("The Octopus is sad"),
+                          tr("Bluetrack is sad"),
                           tr("Check permissions for your .ini directory:\n\n\"%1\"%2\n\nExiting now.").arg(ini_directory(), pad),
                           QMessageBox::Close, QMessageBox::NoButton);
 
@@ -702,7 +702,7 @@ void main_window::ensure_tray()
         if (!tray)
         {
             tray = std::make_unique<QSystemTrayIcon>(this);
-            tray->setIcon(QIcon(":/images/opentrack.png"));
+            tray->setIcon(QIcon(":/images/bluetrack.png"));
             tray->setContextMenu(&tray_menu);
             tray->show();
 
@@ -733,7 +733,7 @@ void main_window::toggle_restore_from_tray(QSystemTrayIcon::ActivationReason e)
 
     const bool is_minimized = isHidden() || !tray_enabled();
 
-    menu_action_show.setText(!isHidden() ? tr("Show the Octopus") : tr("Hide the Octopus"));
+    menu_action_show.setText(!isHidden() ? tr("Show the Head") : tr("Hide the Head"));
 
     setVisible(is_minimized);
 

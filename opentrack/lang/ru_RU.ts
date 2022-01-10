@@ -35,11 +35,11 @@
         <translation></translation>
     </message>
     <message>
-        <source>Show the Octopus</source>
+        <source>Show the Head</source>
         <translation>Показать осьминожка</translation>
     </message>
     <message>
-        <source>Hide the Octopus</source>
+        <source>Hide the Head</source>
         <translation>Спрятать осьминожка</translation>
     </message>
     <message>
@@ -67,7 +67,7 @@
         <translation>Закрыть</translation>
     </message>
     <message>
-        <source>The Octopus is sad</source>
+        <source>Bluetrack is sad</source>
         <translation>Осьминожек опечален</translation>
     </message>
     <message>
@@ -139,10 +139,6 @@ Exiting now.</source>
         <translation>Остановить</translation>
     </message>
     <message>
-        <source>Input</source>
-        <translation>Источник данных</translation>
-    </message>
-    <message>
         <source>🔨</source>
         <translation></translation>
     </message>
@@ -176,6 +172,10 @@ Exiting now.</source>
     </message>
     <message>
         <source>Don&apos;t run as root to remove these annoying messages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

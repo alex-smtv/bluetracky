@@ -30,8 +30,8 @@ private:
     void paintEvent(QPaintEvent*) override;
 
     Pose_ R, T;
-    QImage front{QImage{":/images/side1.png"}.convertToFormat(QImage::Format_ARGB32)};
-    QImage back{QImage{":/images/side6.png"}.convertToFormat(QImage::Format_ARGB32)};
+    QImage front{ QImage{ ":/images/bluetrack-face.png" }.convertToFormat(QImage::Format_ARGB32) };
+    QImage back{ QImage{ ":/images/bluetrack-back.png" }.convertToFormat(QImage::Format_ARGB32).mirrored(true, false) };
 };
 
 }

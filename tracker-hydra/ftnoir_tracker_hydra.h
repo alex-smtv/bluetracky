@@ -45,6 +45,6 @@ class hydraDll : public Metadata
     Q_OBJECT
 
     QString name() override { return QString("Razer Hydra -- inertial device"); }
-    QIcon icon() override { return QIcon(":/images/opentrack.png"); }
+    QIcon icon() override { return QIcon(":/images/bluetrack.png"); }
 };
 
