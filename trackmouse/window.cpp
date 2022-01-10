@@ -150,7 +150,7 @@ void main_window::die_on_config_not_writable()
     static const QString pad(16, QChar(' '));
 
     QMessageBox::critical(this,
-                          tr("Bluetrack is sad"),
+                          tr("Bluetracky is sad"),
                           tr("Check permissions for your .ini directory:\n\n%1\"%2\n\n"
                              "Exiting now."
                           ).arg(ini_directory(), pad),

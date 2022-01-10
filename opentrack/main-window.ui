@@ -25,7 +25,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../gui/opentrack-res.qrc">
-    <normaloff>:/images/bluetrack.png</normaloff>:/images/bluetrack.png</iconset>
+    <normaloff>:/images/bluetracky.png</normaloff>:/images/bluetracky.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">#video_feed { border: 0; }

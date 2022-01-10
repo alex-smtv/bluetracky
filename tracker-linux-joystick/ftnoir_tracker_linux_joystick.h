@@ -86,5 +86,5 @@ class joystickDll : public Metadata
     Q_OBJECT
 
     QString name() { return tr("Linux Joystick input"); }
-    QIcon icon() { return QIcon(":/images/bluetrack.png"); }
+    QIcon icon() { return QIcon(":/images/bluetracky.png"); }
 };

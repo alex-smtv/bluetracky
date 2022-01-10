@@ -1,6 +1,6 @@
 function(otr_init_variant)
     set_property(GLOBAL PROPERTY opentrack-variant "default")
-    set_property(GLOBAL PROPERTY opentrack-ident "bluetrack")
+    set_property(GLOBAL PROPERTY opentrack-ident "bluetracky")
 
     set(subprojects
         "tracker-*"

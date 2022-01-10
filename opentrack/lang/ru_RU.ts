@@ -67,7 +67,7 @@
         <translation>Закрыть</translation>
     </message>
     <message>
-        <source>Bluetrack is sad</source>
+        <source>Bluetracky is sad</source>
         <translation>Осьминожек опечален</translation>
     </message>
     <message>

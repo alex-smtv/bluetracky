@@ -2,11 +2,11 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #include "../build/opentrack-version.hxx"
-#define MyAppName "Bluetrack"
+#define MyAppName "Bluetracky"
 #define MyAppVersion OPENTRACK_VERSION
 #define MyAppPublisher "alex-smtv"
-#define MyAppURL "https://github.com/alex-smtv/bluetrack"
-#define MyAppExeName "bluetrack.exe"
+#define MyAppURL "https://github.com/alex-smtv/bluetracky"
+#define MyAppExeName "bluetracky.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -24,7 +24,7 @@ DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 OutputBaseFilename={#MyAppVersion}-win32-setup
-SetupIconFile=..\opentrack\bluetrack.ico
+SetupIconFile=..\opentrack\bluetracky.ico
 Compression=lzma2/ultra64
 SolidCompression=yes
 DisableWelcomePage=True
