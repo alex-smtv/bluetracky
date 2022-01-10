@@ -132,6 +132,11 @@ void ps3eye_camera::stop()
 
     if (wrapper.state() != QProcess::NotRunning)
     {
+        volatile auto& ptr = *(ps3eye::shm*)shm.ptr();
+        ptr.in.do_exit = 1;
+        std::atomic_thread_fence(std::memory_order_seq_cst);
+        wrapper.waitForFinished(1000);
+
         if (wrapper.state() != QProcess::NotRunning)
             wrapper.kill();
         wrapper.waitForFinished(1000);
@@ -142,6 +147,8 @@ bool ps3eye_camera::start(info& args)
 {
     if (!shm.success())
         return false;
+
+    stop();
 
     volatile auto& ptr = *(ps3eye::shm*)shm.ptr();
     QString error;
@@ -247,6 +254,7 @@ OTR_REGISTER_CAMERA(ps3eye_camera_)
 dialog::dialog(QWidget* parent) : QWidget(parent)
 {
     ui.setupUi(this);
+    setAttribute(Qt::WA_DeleteOnClose);
     tie_setting(s.exposure, ui.exposure_slider);
     tie_setting(s.gain, ui.gain_slider);
     ui.exposure_label->setValue((int)*s.exposure);
