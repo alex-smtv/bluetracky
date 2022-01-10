@@ -62,6 +62,8 @@ class main_window final : public QMainWindow, private State
     std::unique_ptr<IProtocolDialog> pProtocolDialog;
     std::unique_ptr<ITrackerDialog> pTrackerDialog;
 
+    QPalette darkPalette;
+
     process_detector_worker det;
     QMenu profile_menu;
 
@@ -83,6 +85,7 @@ class main_window final : public QMainWindow, private State
     qt_sig::nullary toggle_tracker { this, &main_window::toggle_tracker_, Qt::QueuedConnection };
     qt_sig::nullary restart_tracker { this, &main_window::restart_tracker_, Qt::QueuedConnection };
 
+    void init_qtpalette();
     void init_dylibs();
     void init_tray_menu();
     void init_profiles();
@@ -111,7 +114,7 @@ class main_window final : public QMainWindow, private State
     void show_mapping_window();
 
     void show_pose();
-    void show_pose_(const double* mapped, const double* raw);
+    void show_pose_(const double* mapped, const double* raw, bool is_running);
     void set_title(const QString& game_title = QString());
 
     void start_tracker_();
@@ -130,6 +133,8 @@ class main_window final : public QMainWindow, private State
     void create_copied_profile();
     void open_profile_directory();
 
+    void modify_theme();
+    
     void ensure_tray();
     void toggle_restore_from_tray(QSystemTrayIcon::ActivationReason e);
     bool tray_enabled();

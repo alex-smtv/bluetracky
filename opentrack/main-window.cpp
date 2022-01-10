@@ -24,6 +24,7 @@
 #include <QMessageBox>
 #include <QDesktopServices>
 #include <QDir>
+#include <QStyleFactory>
 
 extern "C" const char* const opentrack_version;
 
@@ -41,6 +42,7 @@ main_window::main_window() : State(OPENTRACK_BASE_PATH + OPENTRACK_LIBRARY_PATH)
     setWindowFlags(Qt::MSWindowsFixedSizeDialogHint | windowFlags());
     setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
+    init_qtpalette();
     init_profiles();
     init_buttons();
     init_dylibs();
@@ -55,6 +57,29 @@ main_window::main_window() : State(OPENTRACK_BASE_PATH + OPENTRACK_LIBRARY_PATH)
     connect(&det_timer, &QTimer::timeout,
             this, &main_window::maybe_start_profile_from_executable);
     det_timer.start(1000);
+}
+
+void main_window::init_qtpalette()
+{
+    QColor darkColor = QColor(45, 45, 45);
+    QColor disabledColor = QColor(127, 127, 127);
+    darkPalette.setColor(QPalette::Window, darkColor);
+    darkPalette.setColor(QPalette::WindowText, Qt::white);
+    darkPalette.setColor(QPalette::Base, QColor(18, 18, 18));
+    darkPalette.setColor(QPalette::AlternateBase, darkColor);
+    darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
+    darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+    darkPalette.setColor(QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Disabled, QPalette::Text, disabledColor);
+    darkPalette.setColor(QPalette::Button, darkColor);
+    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::Disabled, QPalette::ButtonText, disabledColor);
+    darkPalette.setColor(QPalette::BrightText, Qt::red);
+    darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
+
+    darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+    darkPalette.setColor(QPalette::Disabled, QPalette::HighlightedText, disabledColor);
 }
 
 void main_window::init_shortcuts()
@@ -228,6 +253,53 @@ void main_window::init_buttons()
     connect(ui.btnShowFilterControls, &QPushButton::clicked, this, &main_window::show_filter_settings);
     connect(ui.btnStartTracker, &QPushButton::clicked, this, &main_window::start_tracker_);
     connect(ui.btnStopTracker, &QPushButton::clicked, this, &main_window::stop_tracker_);
+    connect(ui.chkBoxDarkTheme, &QCheckBox::clicked, this, &main_window::modify_theme);
+    
+    with_global_settings_object([&](QSettings& s) {
+#ifdef _WIN32
+        if (!s.contains(QStringLiteral(OPENTRACK_DARK_THEME_KEY)))
+        {
+            // Check on windows which theme is used for apps
+            QSettings win_apps_theme(
+                "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+                QSettings::NativeFormat
+            );
+
+            s.setValue(
+                QStringLiteral(OPENTRACK_DARK_THEME_KEY),
+                win_apps_theme.value("AppsUseLightTheme") == 0 ? true : false
+            );
+        }
+#endif
+        // If OPENTRACK_DARK_THEME_KEY is true, simulate clicked box
+        if (s.value(QStringLiteral(OPENTRACK_DARK_THEME_KEY), false).toBool())
+        {
+            ui.chkBoxDarkTheme->click();
+        }
+    });
+}
+
+void main_window::modify_theme()
+{
+    if (ui.chkBoxDarkTheme->isChecked())
+    {
+        with_global_settings_object([&](QSettings& s) {
+            s.setValue(QStringLiteral(OPENTRACK_DARK_THEME_KEY), true);
+        });
+
+        qApp->setPalette(darkPalette);
+        qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
+    }
+    else
+    {
+        with_global_settings_object([&](QSettings& s) {
+            s.setValue(QStringLiteral(OPENTRACK_DARK_THEME_KEY), false);
+        });
+
+        qApp->setPalette(this->style()->standardPalette());
+        qApp->setStyle(QStyleFactory::create("WindowsVista"));
+        qApp->setStyleSheet("");
+    }
 }
 
 void main_window::register_shortcuts()
@@ -364,9 +436,8 @@ void main_window::refresh_profile_list()
         ui.iconcomboProfile->setItemIcon(i, icon);
 
     ui.iconcomboProfile->setCurrentText(current);
+    ui.iconcomboProfile->setToolTip(current);
 }
-
-
 
 void main_window::update_button_state(bool running, bool inertialp)
 {

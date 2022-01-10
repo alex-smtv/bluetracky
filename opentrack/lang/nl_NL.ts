@@ -174,6 +174,10 @@ Exiting now.</source>
         <source>Input</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Activate Dark Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>new_file_dialog</name>

@@ -8,6 +8,7 @@
 #include "init.hpp"
 #include "migration/migration.hpp"
 #include "options/options.hpp"
+using namespace options::globals;
 using namespace options;
 #include "compat/library-path.hpp"
 #include "compat/arch.hpp"
