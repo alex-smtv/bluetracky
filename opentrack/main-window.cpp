@@ -474,7 +474,7 @@ void main_window::start_tracker_()
 
     {
         double p[6] = {0,0,0, 0,0,0};
-        show_pose_(p, p);
+        show_pose_(p, p, true);
     }
 
     if (pTrackerDialog)
@@ -504,8 +504,10 @@ void main_window::stop_tracker_()
     force_is_visible(true);
     with_tracker_teardown sentinel;
 
+    bool is_running = false;
+
     pose_update_timer.stop();
-    ui.pose_display->present(0,0,0, 0,0,0);
+    ui.pose_display->present(0,0,0, 0,0,0, is_running);
 
     if (pTrackerDialog)
         pTrackerDialog->unregister_tracker();
@@ -520,7 +522,7 @@ void main_window::stop_tracker_()
 
     {
         double p[6] {};
-        show_pose_(p, p);
+        show_pose_(p, p, is_running);
     }
 
     update_button_state(false, false);
@@ -528,10 +530,10 @@ void main_window::stop_tracker_()
     ui.btnStartTracker->setFocus();
 }
 
-void main_window::show_pose_(const double* mapped, const double* raw)
+void main_window::show_pose_(const double* mapped, const double* raw, bool is_running)
 {
     ui.pose_display->present(mapped[Yaw], mapped[Pitch], -mapped[Roll],
-                             mapped[TX], mapped[TY], mapped[TZ]);
+                             mapped[TX], mapped[TY], mapped[TZ], is_running);
 
     QLCDNumber* raw_[] = {
         ui.raw_x, ui.raw_y, ui.raw_z,
@@ -584,7 +586,7 @@ void main_window::show_pose()
 
     work->pipeline_.raw_and_mapped_pose(mapped, raw);
 
-    show_pose_(mapped, raw);
+    show_pose_(mapped, raw, true);
 }
 
 static void show_window(QWidget& d, bool fresh)
