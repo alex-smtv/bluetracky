@@ -2,46 +2,44 @@
 
 ![Intro](./_res/intro.png)
 
-`Bluetracky` is a custom edited build of `opentrack version 2.3.12` with a focus on the `Point Tracker` module. It takes opentrack 2.3.12 and adds selected quality of life modification seen on later builds. It doesn't change tracking behaviors of the Point Tracker found on opentrack 2.3.12. Additionally it also contains custom addition not found in the original software.
+`Bluetracky` is a custom edited build of `opentrack version 2.3.12` with a focus on the `Point Tracker` module. It takes opentrack 2.3.12 and adds hand-picked quality of life modification seen on later builds. Tracking efficiency of the Point Tracker found on opentrack 2.3.12 is not altered. Additionally, it also contains custom additions not found in the original software (at the time this custom build was made).
 
-This is mostly a personal build tailored to my needs which I make available for anyone interested in it. It is not meant to replace the original software development.
-
-## Settings location
-In order to not mix-match with the original opentrack, bluetracky stores its settings in a different location in the registry and in the disk.
-
-Profiles are stored in your `Documents/bluetracky`.
-
-## Note on the software name
-I decided to give this custom build the name bluetracky instead of opentrack in the hope to not confuse people while using the software. It will be clear whether they're using an official opentrack software or not. Remember, this a custom build.
-
-Additionally I changed the logo to my liking and which fits the new name.
-
-Side note: the name is mostly changed for the end user (interface, executable). For devs the name is kept as opentrack for references (for instance variable names).
+This is mostly a personal build tailored to my own needs which I make available to anyone interested in it. My motivation on this project is explained below.
 
 ## Motivation
 
-This endeavor to create a custom build is a result of tackling problems faced with the original software. The software was working very well with my personnal profile I spent countless hours tweaking. Then a few version later of the software with new features and my profile wasn't working as well as it was in the past: I lost significant stabilities with the head tracking.
+This endeavor to create a custom build is a result of tackling problems faced with the original software. The software was working well with my personal made profile I spent countless hours fine-tuning until a later version of the software made my profile not work so well anymore. The head tracking got really bad and was not as much stable as it used to be despite tweaking new available features (positive results were found, but they never matched my previous experience).
 
-I spent another countless hours/days trying different builds to resolve the problem by recreating profiles from scratch and exploiting new features. To keep it short I got some positive result, but it never matched my previous experience and the new features introduced in the newer builds were breaking someting.
+At this point, I knew for sure the build v2.3.12 was the last one I knew to be working exactly as I expected to. However, this build is lacking some features I'd like to have. The most predominant ones are the dark theme and the fix to the PS3 red light not shutting down on the PS3 open driver.
 
-I knew for a fact that the 2.3.12 build was the last build I knew to be working exactly as I expected to. However this build is lacking some features I'd like to have. The most predominant ones are the dark theme and the fix to the ps3 red light not shutting down with the ps3 open driver.
+Following the mantra of `if it ain't broke, don't fix it`, I decided to take the 2.3.12 build and polish the outside to my liking. From the get-go this new custom build was designed to not alter any tracking efficiency found in 2.3.12 and just apply necessary fixes (e.g. PS3 red light) and end-user (GUI) additions. Also remember this is tailored to my own needs so my focus was mainly on the Point Tracker module, I didn't chase fixes for other tracking solutions.
 
-Following the mantra of `if it ain't broke, don't fix it`, I decided to take the 2.3.12 build and polish the outside as I would like it to look like. This means this build is not altering tracking behaviors found in 2.3.12.
-
-## Notable modification
-As a reminder, some of these modification come from later build of opentrack and others are custom additions:
-- Dark theme available and selectable (instead of being locked to system configuration).
-- Fix the PS3 red light not shutting down when the software is stopped.
+## Notable changes
+Some of these changes come from later builds of opentrack and others are my personal additions:
+- Dark theme: available as a toggle (instead of being locked to your OS system theme).
+- PS3 red light: fix the light not shutting down when the software is stopped.
 - Octopus head became a human head.
 - Enhanced human head position and lighting.
 - Add a mirror option for the human head position to mimic result as seen in-game. Made this option selected by default.
 - Default folder used for saving profiles changed in order to not conflict with the original opentrack software.
 
+## Settings location
+In order to not mix-match and conflict with the original opentrack, bluetracky stores its settings in a different location in your registry and in your storage.
+
+Profiles are stored in the following folder: `%USERPROFILE%/Documents/bluetracky`.
+
+## Note on the software name
+I decided to give this custom build the name bluetracky instead of opentrack in the hope to not confuse people while using either of these softwares. It will be clear whether you're using an official opentrack software or not.
+
+Additionally, for the fun of it and because it helps make further distinction, I also changed the logo to my liking.
+
+*Side note for devs: the name is mostly changed for the end user (interface, executable). Internally, references  (e.g. variable names) are kept to 'opentrack'.*
+
 ## Release platform
 Currently Windows is the targeted platform for release builds. You'll need to build it yourself for other platforms with no guarantee as I've presently not tested its effectiveness.
 
 ## Logo credit
-The logo is a custom construction and editing based on free resources found as following:
+The logo is a custom design based on these free resources:
 
 - Head / Hairs
 [Designed by pikisuperstar / Freepik](https://www.freepik.com/free-vector/cartoon-man-character-template_4175440.htm)
@@ -51,9 +49,9 @@ The logo is a custom construction and editing based on free resources found as f
 [Designed by macrovector / Freepik](https://www.freepik.com/free-vector/beard-hairstyles-face-set_3799705.htm)
 
 ## Full Credits
-I would like to personally thank the creator of opentrack and its contributors for making opentrack a great open source tool.
+I would like to personally thank the creator of opentrack and his contributors for making opentrack a great open source tool.
 
-You'll find the full original credits in the original [README below](#credits-in-chronological-order).
+The complete original credits is found at the [README below](#credits-in-chronological-order).
 
 ***
 
